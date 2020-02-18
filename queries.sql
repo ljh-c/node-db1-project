@@ -1,7 +1,8 @@
 -- Database Queries
 
 -- Find all customers with postal code 1010
-SELECT * FROM [Customers] 
+SELECT * 
+FROM [Customers] 
 WHERE [PostalCode] = '1010';
 
 -- Find the phone number for the supplier with the id 11
@@ -12,7 +13,7 @@ WHERE [SupplierId] = '6';
 -- List first 10 orders placed, sorted descending by the order date
 SELECT * 
 FROM (
-  SELECT *
+  SELECT * 
   FROM [Orders]
   ORDER BY [OrderDate] 
   LIMIT 10
@@ -35,7 +36,10 @@ SET [PostalCode] = 11122
 WHERE [CustomerId] = 92;
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
-SELECT DISTINCT [City] FROM [Customers];
+SELECT DISTINCT [City] 
+FROM [Customers];
 
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
-SELECT [SupplierName] FROM [Suppliers] WHERE LENGTH([SupplierName]) > 20;
+SELECT [SupplierName] 
+FROM [Suppliers] 
+WHERE LENGTH([SupplierName]) > 20;
